@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.techfak.gse.mbaig.GSERadioClientView">
+  <Label fx:id="nowLive" layoutX="6.0" layoutY="164.0" prefHeight="35.0" prefWidth="123.0" text="Now Live:">
+    <font>
+      <Font name="System Bold" size="25.0" />
+    </font>
+  </Label>
+  <Label fx:id="currentSongLabel" layoutX="129.0" layoutY="165.0" prefHeight="35.0" prefWidth="470.0" text="currentSong">
+    <font>
+      <Font size="20.0" />
+    </font>
+    <opaqueInsets>
+      <Insets />
+    </opaqueInsets>
+  </Label>
+  <Label fx:id="currentArtist" layoutX="5.0" layoutY="206.0" prefHeight="30.0" prefWidth="64.0" text="Artist:">
+    <font>
+      <Font name="System Bold" size="20.0" />
+    </font>
+  </Label>
+  <Separator fx:id="seperatorFX" layoutX="-4.0" layoutY="231.0" prefHeight="5.0" prefWidth="600.0" />
+  <Label fx:id="currentArtistLabel" layoutX="67.0" layoutY="200.0" prefHeight="43.0" prefWidth="214.0" text="currentArtist">
+    <font>
+      <Font size="17.0" />
+    </font>
+  </Label>
+  <Label layoutX="296.0" layoutY="206.0" prefHeight="30.0" prefWidth="71.0" text="Album:">
+    <font>
+      <Font name="System Bold" size="20.0" />
+    </font>
+  </Label>
+  <Label fx:id="currentAlbumLabel" layoutX="366.0" layoutY="200.0" prefHeight="43.0" prefWidth="227.0" text="currentAlbum">
+    <font>
+      <Font size="17.0" />
+    </font>
+  </Label>
+  <TableView fx:id="playlistTableView" focusTraversable="false" layoutY="236.0" opacity="0.95" prefHeight="314.0" prefWidth="600.0">
+    <columns>
+      <TableColumn fx:id="titleColumn" editable="false" prefWidth="166.0" sortable="false" text="Title" />
+      <TableColumn fx:id="artistColumn" editable="false" prefWidth="126.0" sortable="false" text="Artist" />
+      <TableColumn fx:id="albumColumn" editable="false" prefWidth="128.0" sortable="false" text="Album" />
+      <TableColumn fx:id="voteButtonColumn" editable="false" prefWidth="94.0" sortable="false" text="Vote" />
+      <TableColumn fx:id="voteCounterColumn" editable="false" prefWidth="85.0" sortable="false" text="Votes" />
+    </columns>
+    <columnResizePolicy>
+      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+    </columnResizePolicy>
+  </TableView>
+   <Label fx:id="serverAddr" layoutX="14.0" layoutY="14.0" prefHeight="36.0" prefWidth="180.0" text="Server Address">
+      <font>
+         <Font name="System Bold" size="25.0" />
+      </font>
+   </Label>
+   <TextField fx:id="tfURLField" layoutX="194.0" layoutY="14.0" prefHeight="36.0" prefWidth="399.0" promptText="Example: rtp://192.168.0.213:1337" />
+   <Button fx:id="btnContactServer" layoutX="14.0" layoutY="65.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="575.0" text="Connect" onMouseClicked="#getServerResponse">
+      <padding>
+         <Insets left="10.0" right="10.0" />
+      </padding>
+      <opaqueInsets>
+         <Insets left="10.0" right="10.0" />
+      </opaqueInsets>
+   </Button>
+   <Separator fx:id="seperatorFX2" layoutY="159.0" prefHeight="5.0" prefWidth="600.0" />
+   <Label fx:id="labelStatus" layoutX="14.0" layoutY="120.0" prefHeight="30.0" prefWidth="575.0" text="Status:">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+</Pane>
